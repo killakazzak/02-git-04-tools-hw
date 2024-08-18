@@ -1,159 +1,53 @@
-# Домашнее задание к занятию "`Git`" - `Тен Денис`
+# Домашнее задание к занятию "`Инструменты Git`" - `Тен Денис`
 
 
-### Инструкция по выполнению домашнего задания
+### Цель задания
 
-   1. Сделайте `fork` данного репозитория к себе в Github и переименуйте его по названию или номеру занятия, например, https://github.com/имя-вашего-репозитория/git-hw или  https://github.com/имя-вашего-репозитория/7-1-ansible-hw).
-   2. Выполните клонирование данного репозитория к себе на ПК с помощью команды `git clone`.
-   3. Выполните домашнее задание и заполните у себя локально этот файл README.md:
-      - впишите вверху название занятия и вашу фамилию и имя
-      - в каждом задании добавьте решение в требуемом виде (текст/код/скриншоты/ссылка)
-      - для корректного добавления скриншотов воспользуйтесь [инструкцией "Как вставить скриншот в шаблон с решением](https://github.com/netology-code/sys-pattern-homework/blob/main/screen-instruction.md)
-      - при оформлении используйте возможности языка разметки md (коротко об этом можно посмотреть в [инструкции  по MarkDown](https://github.com/netology-code/sys-pattern-homework/blob/main/md-instruction.md))
-   4. После завершения работы над домашним заданием сделайте коммит (`git commit -m "comment"`) и отправьте его на Github (`git push origin`);
-   5. Для проверки домашнего задания преподавателем в личном кабинете прикрепите и отправьте ссылку на решение в виде md-файла в вашем Github.
-   6. Любые вопросы по выполнению заданий спрашивайте в чате учебной группы и/или в разделе “Вопросы по заданию” в личном кабинете.
-   
-Желаем успехов в выполнении домашнего задания!
-   
-### Дополнительные материалы, которые могут быть полезны для выполнения задания
+В результате выполнения задания вы:
 
-1. [Руководство по оформлению Markdown файлов](https://gist.github.com/Jekins/2bf2d0638163f1294637#Code)
+* научитесь работать с утилитами Git;
+* потренируетесь решать типовые задачи, возникающие при работе в команде. 
 
----
+### Инструкция к заданию
 
-### Задание 1
+1. Склонируйте [репозиторий](https://github.com/hashicorp/terraform) с исходным кодом Terraform.
+2. Создайте файл для ответов на задания в своём репозитории, после выполнения прикрепите ссылку на .md-файл с ответами в личном кабинете.
+3. Любые вопросы по решению задач задавайте в чате учебной группы.
 
-#### Создание репозитория
-![Создание репозитория](https://github.com/killakazzak/8-1-git-hw/blob/main/img/2024-02-28_16-32-21.jpg)
+------
 
-```
-git clone https://github.com/killakazzak/netology.git
-```
-![(https://github.com/killakazzak/8-1-git-hw/blob/main/img/1.jpg)](https://github.com/killakazzak/8-1-git-hw/blob/main/img/1.png)
-```
-git config --global user.name "Denis Ten"
-git config --global user.email "denis.a.ten@gmail.com"
-git status
-```
-![](https://github.com/killakazzak/8-1-git-hw/blob/main/img/2.png)
-```
-echo "Hello World!" >> README.md
-git status
-```
-![](https://github.com/killakazzak/8-1-git-hw/blob/main/img/3.png)
-```
-git diff
-```
-![](https://github.com/killakazzak/8-1-git-hw/blob/main/img/4.png)
+## Задание
 
-```
-git add README.md
-git diff --staged
-git status
-```
-![](https://github.com/killakazzak/8-1-git-hw/blob/main/img/6.png)
-```
-git commit -m 'First commit'
-```
-![](https://github.com/killakazzak/8-1-git-hw/blob/main/img/7.png)
-![](https://github.com/killakazzak/8-1-git-hw/blob/main/img/8.png)
-```
-git remote set-url origin https://killakazzak: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@github.com/killakazzak/netology.git
-git push origin main
-```
-![](https://github.com/killakazzak/8-1-git-hw/blob/main/img/9.png)
+В клонированном репозитории:
 
-[Ссылка на commit](https://github.com/killakazzak/netology/commit/22f3d2506c1b15c3ab6f0682a188c405f8e54892)
+1. Найдите полный хеш и комментарий коммита, хеш которого начинается на `aefea`.
+2. Ответьте на вопросы.
+
+* Какому тегу соответствует коммит `85024d3`?
+* Сколько родителей у коммита `b8d720`? Напишите их хеши.
+* Перечислите хеши и комментарии всех коммитов, которые были сделаны между тегами  v0.12.23 и v0.12.24.
+* Найдите коммит, в котором была создана функция `func providerSource`, её определение в коде выглядит так: `func providerSource(...)` (вместо троеточия перечислены аргументы).
+* Найдите все коммиты, в которых была изменена функция `globalPluginDirs`.
+* Кто автор функции `synchronizedWriters`? 
+
+*В качестве решения ответьте на вопросы и опишите, как были получены эти ответы.*
 
 ---
 
-### Задание 2
+### Правила приёма домашнего задания
 
-```
-touch .gitignore
-git status
-```
-![](https://github.com/killakazzak/8-1-git-hw/blob/main/img/21.png)
-```
-git add .gitignore
-git status
-```
-![](https://github.com/killakazzak/8-1-git-hw/blob/main/img/22.png)
-```
-echo "*.pyc" >> .gitignore && echo "cache/" >> .gitignore
-```
-![](https://github.com/killakazzak/8-1-git-hw/blob/main/img/23.png)
-```
-git add .gitignore
-git commit -m "Second Commit"
-```
-![](https://github.com/killakazzak/8-1-git-hw/blob/main/img/24.png)
-```
-git push origin main
-```
-![](https://github.com/killakazzak/8-1-git-hw/blob/main/img/25.png)
+В личном кабинете отправлена ссылка на .md-файл в вашем репозитории.
 
-[Ссылка на README.md](https://github.com/killakazzak/netology/blob/0d2269d19d0a4587a9e5c471208812acfdc84ecc/README.md)
+### Критерии оценки
 
-### Задание 3
-```
-git branch dev
-git checkout dev
-```
-![](https://github.com/killakazzak/8-1-git-hw/blob/main/img/31.png)
-```
-echo "Всем привет!" > test.sh
-git add test.sh
-git commit -m "Commit message"
-```
-![](https://github.com/killakazzak/8-1-git-hw/blob/main/img/32.png)
-```
-git checkout main
-```
-![](https://github.com/killakazzak/8-1-git-hw/blob/main/img/33.png)
-![](https://github.com/killakazzak/8-1-git-hw/blob/main/img/34.png)
+Зачёт:
 
-```
-git merge dev
-```
-![](https://github.com/killakazzak/8-1-git-hw/blob/main/img/35.png)
-```
-git pull
-git push
-```
-![](https://github.com/killakazzak/8-1-git-hw/blob/main/img/36.png)
+* выполнены все задания;
+* ответы даны в развёрнутой форме;
+* приложены соответствующие скриншоты и файлы проекта;
+* в выполненных заданиях нет противоречий и нарушения логики.
 
-[Ссылка на граф](https://github.com/killakazzak/netology/network)
-### Задание 4
-```
-git branch conflict
-git checkout conflict
-```
-![](https://github.com/killakazzak/8-1-git-hw/blob/main/img/41.png)
-```
-git add test.sh
-git commit -m "conflict commit"
-```
-![](https://github.com/killakazzak/8-1-git-hw/blob/main/img/42.png)
-```
-git push origin conflict
-```
-![](https://github.com/killakazzak/8-1-git-hw/blob/main/img/43.png)
-```
-git add test.sh
-git commit -m "commit temp"
-git push origin main
-git merge conflict
-git add test.sh
-git commit -m "Resolved conflict in test.sh"
-git push origin main
-```
-![](https://github.com/killakazzak/8-1-git-hw/blob/main/img/44.png)
-![](https://github.com/killakazzak/8-1-git-hw/blob/main/img/45.png)
+На доработку:
 
-[Ссылка на файл test.sh](https://github.com/killakazzak/netology/blob/main/test.sh)
-
-
-
-
+* задание выполнено частично или не выполнено вообще;
+* в логике выполнения заданий есть противоречия и существенные недостатки.
