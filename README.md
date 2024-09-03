@@ -72,7 +72,24 @@ git log -G 'globalPluginDirs' --oneline
 ```
 ![image](https://github.com/user-attachments/assets/1e7a3038-6048-444a-9775-bc80dcb469ae)
 
-* Кто автор функции `synchronizedWriters`? 
+* Кто автор функции `synchronizedWriters`?
+
+```bash
+git log -S 'synchronizedWriters'
+```
+![image](https://github.com/user-attachments/assets/06bbe37b-a766-4b51-a5b4-3a67d26fe730)
+
+Берём самый ранний коммит
+
+```bash
+git show 5ac311e2a91e381e2f52234668b49ba670aa0fe5
+```
+![image](https://github.com/user-attachments/assets/a7a90a3f-c268-46a0-acbe-dcaf20906e8c)
+
+Автор: Martin Atkins <mart@degeneration.co.uk>
+
+![image](https://github.com/user-attachments/assets/e8cdc51f-3f89-4d83-bfbc-f8f04581c061)
+
 
 *В качестве решения ответьте на вопросы и опишите, как были получены эти ответы.*
 
