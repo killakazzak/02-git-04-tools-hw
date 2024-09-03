@@ -30,8 +30,27 @@ git log --oneline | grep aefea
 3. Ответьте на вопросы.
 
 * Какому тегу соответствует коммит `85024d3`?
+```bash
+git tag --contains 85024d3
+```
+
+![image](https://github.com/user-attachments/assets/8118ee8c-3237-43c4-b4ed-8061ed5ab10c)
+
 * Сколько родителей у коммита `b8d720`? Напишите их хеши.
+
+```bash
+git rev-list --parents -n 1 b8d720
+```
+![image](https://github.com/user-attachments/assets/6145c13c-5e02-4603-b823-9ae85ecf4d4b)
+
 * Перечислите хеши и комментарии всех коммитов, которые были сделаны между тегами  v0.12.23 и v0.12.24.
+
+```bash
+git log v0.12.23..v0.12.24 --oneline
+```
+
+![image](https://github.com/user-attachments/assets/42e99062-742d-4e9a-b92f-603237f542ed)
+
 * Найдите коммит, в котором была создана функция `func providerSource`, её определение в коде выглядит так: `func providerSource(...)` (вместо троеточия перечислены аргументы).
 * Найдите все коммиты, в которых была изменена функция `globalPluginDirs`.
 * Кто автор функции `synchronizedWriters`? 
