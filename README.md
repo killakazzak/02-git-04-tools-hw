@@ -52,7 +52,26 @@ git log v0.12.23..v0.12.24 --oneline
 ![image](https://github.com/user-attachments/assets/42e99062-742d-4e9a-b92f-603237f542ed)
 
 * Найдите коммит, в котором была создана функция `func providerSource`, её определение в коде выглядит так: `func providerSource(...)` (вместо троеточия перечислены аргументы).
+
+```bash
+git log -S 'func providerSource(' --oneline
+```
+![image](https://github.com/user-attachments/assets/c8ba023a-894c-45ab-a4ee-cf74d5c2813c)
+
 * Найдите все коммиты, в которых была изменена функция `globalPluginDirs`.
+
+```bash
+git log -S 'globalPluginDirs' --oneline
+```
+![image](https://github.com/user-attachments/assets/c9a36ee9-944c-4cb3-9750-0042436dab7e)
+
+Можно искать по регуляному выражению, но почему то результат другой.
+
+```bash
+git log -G 'globalPluginDirs' --oneline
+```
+![image](https://github.com/user-attachments/assets/1e7a3038-6048-444a-9775-bc80dcb469ae)
+
 * Кто автор функции `synchronizedWriters`? 
 
 *В качестве решения ответьте на вопросы и опишите, как были получены эти ответы.*
